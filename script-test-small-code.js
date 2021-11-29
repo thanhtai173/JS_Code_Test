@@ -29,3 +29,73 @@ for (const i of arr) {
 }
 console.log(a2);
 */
+
+/* Hex to Binary
+function toBinary(num) {
+  // Javascript auto change hex to decimal -> num is decimal
+  let newBinary = "";
+  let temp = num;
+  let redtemp = 0;
+  const arrredtemp = [];
+  while (temp >= 2) {
+    redtemp = temp % 2;
+    temp = Math.trunc(temp / 2);
+    arrredtemp.push(redtemp);
+    console.log(arrredtemp);
+  }
+  arrredtemp.push(temp);
+  for (let i = 0; i < arrredtemp.length; i++)
+    newBinary = newBinary + arrredtemp[arrredtemp.length - i - 1];
+  return newBinary;
+}
+const a = toBinary(0xfa);
+console.log(a);
+*/
+
+/* Arrange object inside arrays 
+const drinks = [
+  { name: "lemonade", price: 50 },
+  { name: "lime", price: 10 },
+  { name: "lemon", price: 30 },
+  { name: "apple", price: 60 },
+  { name: "grape", price: 40 },
+];
+
+function sortDrinkByPrice(drinks) {
+  // drinks is array
+  let newdrinks = drinks;
+  let temp;
+  for (let i = 0; i < newdrinks.length - 1; i++) {
+    for (let j = i + 1; j < newdrinks.length; j++) {
+      if (drinks[j].price < newdrinks[i].price) {
+        temp = newdrinks[j];
+        newdrinks[j] = newdrinks[i];
+        newdrinks[i] = temp;
+      }
+    }
+  }
+  return newdrinks;
+}
+const a = sortDrinkByPrice(drinks);
+console.log(a);
+*/
+
+/* Bitwise
+function bitwiseAND(n1, n2) {
+  return n1 & n2;
+}
+
+function bitwiseOR(n1, n2) {
+  return n1 | n2;
+}
+
+function bitwiseXOR(n1, n2) {
+  return n1 ^ n2;
+}
+
+console.log(bitwiseAND(7, 12)); // 4
+
+console.log(bitwiseOR(7, 12)); // 15
+
+console.log(bitwiseXOR(7, 12)); // 11
+*/
