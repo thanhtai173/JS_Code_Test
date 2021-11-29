@@ -14,3 +14,7 @@ const booker = secureBooking();
 booker();
 booker();
 booker();
+// The closure means that the environment in secureBooking is finished when
+// booker() finishs running but the variable passengerCount still keep the
+// "reference" value outer the scope and this value is updated in the next
+// run of booker()
